@@ -18,5 +18,7 @@ const precosFiltrados = precos.filter( preco => preco < 100 );
 console.log(precosFiltrados);
 
 // reduce()
+// percorre todos os elementos, realizando um processamento e retornando um valor ao final
+// é necessário uma variável acumuladora
 const total = precos.reduce( (soma, preco) => soma += preco, 120 );
 console.log("Valor total: R$", total)
