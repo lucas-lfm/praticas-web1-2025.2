@@ -2,6 +2,7 @@ const cars = ["Ford", "Hyundai", "BMW", "Honda"];
 const cars2 = cars.slice(1, 3);
 // console.log(cars2); // Saída: Array [“Hyundai”, “BMW”]
 
+//forEach() percorre todos os elementos do array executando uma função
 // cars.forEach( valor => console.log(valor) );
 
 const precos = [29.90, 56.49, 124.90, 239.90, 69.90];
