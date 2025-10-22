@@ -18,7 +18,12 @@ console.log("Item removido:", removido);
 delete alunos[1]; // remover um elemento preservando os índices do array
 console.log(alunos, alunos[1]);
 
-const copiaAlunos = alunos;
+/** 
+ * gera um vínculo por referência
+ * alunos e copiaAlunos apontam para a mesma região de memória
+ * isso acontece porque arrays e objetos são valores por referência
+*/
+const copiaAlunos = alunos; 
 copiaAlunos.push("Novo Aluno");
 
 console.log(copiaAlunos, alunos);
@@ -28,4 +33,4 @@ let b = a; // gera uma cópia de valor
 
 b += 5;
 
-console.log(a, b);
+console.log(a, b); // a e b são variáveis independentes
