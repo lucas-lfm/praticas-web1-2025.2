@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Exemplo - API de Domínio</title>
+
+    <style>
+      * {
+        box-sizing: border-box;
+      }
+
+      .container {
+        max-width: 600px;
+        margin: auto;
+        padding: 20px;
+        border: 1px solid #ccc;
+        border-radius: 8px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      }
+
+      #status {
+        font-family: Arial, sans-serif;
+        font-size: 20px;
+        color: #333;
+        margin: 20px;
+        line-height: 1.5;
+      }
+
+      .label-status {
+        font-weight: bold;
+        padding: 5px 25px;
+        border-radius: 4px;
+        display: inline-block;
+        font-size: 14px;
+        letter-spacing: 3px;
+        text-transform: uppercase;
+      }
+
+      .available {
+        color: green;
+        background-color: #e6ffe6;
+      }
+
+      .unavailable {
+        color: red;
+        background-color: #ffe6e6;
+      }
+
+      .suggestions {
+        margin-top: 10px;
+        font-size: 16px;
+        color: #666;
+
+        & li {
+          margin-bottom: 8px;
+        }
+      }
+
+      .domain {
+        font-weight: bold;
+        color: blue;
+      }
+
+      form#domain-form {
+        margin: 0 auto;
+        font-family: Arial, sans-serif;
+        font-size: 18px;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        gap: 10px;
+
+        & #domain-input {
+          padding: 8px;
+          font-size: 16px;
+          margin-right: 10px;
+          width: 100%;
+        }
+
+        & button {
+          all: unset;
+          background-color: #8de9f7;
+          color: #053f7d;
+          border-radius: 4px;
+          padding: 12px 24px;
+          font-size: 16px;
+          cursor: pointer;
+          width: fit-content;
+          margin: 1rem auto;
+          text-transform: uppercase;
+          letter-spacing: 0.5px;
+          font-weight: bold;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <form id="domain-form">
+        <label for="domain-input">Pesquise pelo nome de domínio:</label>
+        <input
+          type="text"
+          id="domain-input"
+          name="domain"
+          required
+          placeholder="exemplo.com.br"
+        />
+        <button type="submit">Verificar Status</button>
+      </form>
+
+      <div id="status" hidden></div>
+    </div>
+
+    <script src="index.js"></script>
+  </body>
+</html>
