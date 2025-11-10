@@ -1,8 +1,3 @@
-// Na sua implementação, você deve pegar o domínio que o usuário informar no formulário da página HTML.
-// Para fins de exemplo, aqui está um domínio fixo.
-
-const form = document.getElementById("domain-form");
-
 const renderizar = function (dados) {
   let txtStatus;
   let listaSugestoes = null;
@@ -30,13 +25,15 @@ const renderizar = function (dados) {
   }
 };
 
+const form = document.getElementById("domain-form");
+
 form.addEventListener("submit", async (evento) => {
   evento.preventDefault();
 
   const domain = form.querySelector("#domain-input").value;
 
   // Fazendo a requisição para a API BrasilAPI para verificar o status do domínio
-  // O uso de 'await' aqui requer que o script seja do tipo módulo (type="module" no HTML)
+  // O uso de 'await' aqui requer que a função seja assíncrona (async)
   // O await é usado para esperar a resposta da requisição antes de continuar a execução do código.
   const data = await fetch(
     `https://brasilapi.com.br/api/registrobr/v1/${domain}`
