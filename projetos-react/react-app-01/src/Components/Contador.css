@@ -1,0 +1,14 @@
+.contador {
+    font-weight: bold;
+}
+
+.btn-grupo {
+    display: flex;
+    gap: 12px;
+
+    & button {
+        width: 40px;
+        padding-left: 8px;
+        padding-right: 8px;
+    }
+}
